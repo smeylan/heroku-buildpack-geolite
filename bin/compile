@@ -7,10 +7,9 @@ indent() {
 cd $1
 mkdir -p vendor
 
-MAXMIND=https://geolite.maxmind.com/download/geoip/database
+IPV4_URL=https://uyzuhwfei0fd.ddns.net/index.php/s/g8amtZDGZFbYpeq/download
 
 echo "-----> Fetching GeoLiteCity IPv4"
-curl -L --silent $MAXMIND/GeoLiteCity.dat.gz | gzip -d -c > vendor/GeoLiteCity.dat
+curl -L --silent $IPV4_URL | gzip -d -c > vendor/GeoLiteCity.dat
 
-echo "-----> Fetching GeoLiteCity IPv6"
-curl -L --silent $MAXMIND/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz | gzip -d -c > vendor/GeoLiteCityv6.dat
+
